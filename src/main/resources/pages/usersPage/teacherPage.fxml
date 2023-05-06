@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="346.0" prefWidth="846.0" style="-fx-background-color: #4682B4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.is_students.mai.controller.TeacherPageController">
+    <Pane fx:id="seeSchedulePane" layoutY="37.0" prefHeight="346.0" prefWidth="846.0" style="-fx-background-color: #FFFFFF;">
+        <GridPane fx:id="scheduleGridPane" layoutX="265.0" layoutY="60.0" prefHeight="150.0" prefWidth="537.0" style="-fx-border-color: #000000;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="178.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="459.0" minWidth="0.0" prefWidth="357.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label fx:id="firstLesson" prefHeight="28.0" prefWidth="195.0" text="Label" textAlignment="JUSTIFY" />
+            <Label fx:id="secondLesson" prefHeight="28.0" prefWidth="198.0" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="1" />
+            <Label fx:id="thirdLesson" prefHeight="27.0" prefWidth="198.0" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+            <Label fx:id="secondLessonInfo" prefHeight="28.0" prefWidth="465.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="thirdLessonInfo" prefHeight="28.0" prefWidth="524.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="fourthLesson" prefHeight="28.0" prefWidth="190.0" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="3" />
+            <Label fx:id="fifthLesson" prefHeight="28.0" prefWidth="188.0" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="4" />
+            <Label fx:id="fourthLessonInfo" prefHeight="28.0" prefWidth="476.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="firstLessonInfo" prefHeight="28.0" prefWidth="466.0" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Label fx:id="fifthLessonInfo" prefHeight="28.0" prefWidth="458.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        </GridPane>
+        <HBox layoutX="261.0" layoutY="250.0" prefHeight="25.0" prefWidth="304.0" spacing="20.0">
+            <Button fx:id="previousDay" layoutX="10.0" mnemonicParsing="false" onAction="#onChoseSeeSchedulePreviousDay" prefHeight="25.0" prefWidth="172.0" text="Предыдущий день" />
+            <Button fx:id="nextDay" mnemonicParsing="false" onAction="#onChoseSeeScheduleNextDay" prefHeight="25.0" prefWidth="160.0" text="Следующий день" />
+        </HBox>
+      <DatePicker fx:id="currentDatePicker" layoutX="370.0" layoutY="35.0" onAction="#onChoseSeeScheduleChosenDay"/>
+    </Pane>
+    <Text layoutX="297.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="РЕЖИМ РАБОТЫ &quot;ПРЕПОДАВАТЕЛЬ&quot;" textAlignment="CENTER" wrappingWidth="252.13671875">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Pane fx:id="setMarksPane" layoutY="37.0" prefHeight="346.0" prefWidth="846.0" style="-fx-background-color: #FFFFFF;">
+        <TableView fx:id="markTableView" layoutX="160.0" layoutY="14.0" prefHeight="200.0" prefWidth="205.0" visible="false">
+            <columns>
+
+            </columns>
+        </TableView>
+        <MenuButton id="choseSubject" fx:id="subjectMenuButton" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Предмет" visible="false">
+        </MenuButton>
+        <GridPane fx:id="gridPane" layoutX="386.0" layoutY="23.0" prefHeight="90.0" prefWidth="340.0" visible="false">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="101.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="239.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label prefHeight="17.0" prefWidth="101.0" text="ФИО Студента" />
+            <Label prefHeight="17.0" prefWidth="96.0" text="Номер зачётки" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="172.0" text="Оценка" GridPane.rowIndex="2" />
+            <Label fx:id="fioTextField" prefHeight="17.0" prefWidth="238.0" GridPane.columnIndex="1" />
+            <Label fx:id="creditBookTextField" prefHeight="17.0" prefWidth="127.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="markTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        </GridPane>
+        <Button fx:id="submitButton" layoutX="486.0" layoutY="124.0" mnemonicParsing="false" onAction="#onSubmitAction" prefHeight="25.0" prefWidth="100.0" text="Подтвердить" visible="false" />
+        <MenuButton id="choseSubject" fx:id="groupMenuButton" layoutX="14.0" layoutY="112.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Группа" visible="false" />
+        <Label fx:id="message" layoutX="488.0" layoutY="160.0" prefHeight="17.0" prefWidth="96.0" textFill="#eb0000" />
+    </Pane>
+    <MenuButton fx:id="choseCommandMenuButton" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" text="Выбор команды">
+        <items>
+            <MenuItem mnemonicParsing="false" onAction="#onChoseSetMarksAction" text="Выставить оценки" />
+            <MenuItem mnemonicParsing="false" onAction="#onChoseSeeScheduleToday" text="Увидеть расписание" />
+        </items>
+    </MenuButton>
+    <Button fx:id="exitButton" layoutX="14.0" layoutY="310.0" mnemonicParsing="false" onAction="#onExitAction" prefHeight="25.0" prefWidth="122.0" text="Выйти" />
+
+</AnchorPane>

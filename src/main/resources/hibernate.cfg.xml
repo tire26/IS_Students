@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">Vano2810@</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.connection.useUnicode">true</property>
+        <property name="hibernate.connection.characterEncoding">UTF-8</property>
+        <property name="hibernate.connection.charSet">UTF-8</property>
+
+        <mapping class="com.example.is_students.mai.entity.AssessmentType"/>
+        <mapping class="com.example.is_students.mai.entity.Course"/>
+        <mapping class="com.example.is_students.mai.entity.CreditBook"/>
+        <mapping class="com.example.is_students.mai.entity.Document"/>
+        <mapping class="com.example.is_students.mai.entity.Faculty"/>
+        <mapping class="com.example.is_students.mai.entity.Group"/>
+        <mapping class="com.example.is_students.mai.entity.Lesson"/>
+        <mapping class="com.example.is_students.mai.entity.RefMark"/>
+        <mapping class="com.example.is_students.mai.entity.PhoneNumber"/>
+        <mapping class="com.example.is_students.mai.entity.Status"/>
+        <mapping class="com.example.is_students.mai.entity.Student"/>
+        <mapping class="com.example.is_students.mai.entity.Subject"/>
+        <mapping class="com.example.is_students.mai.entity.Mark"/>
+        <mapping class="com.example.is_students.mai.entity.UserType"/>
+        <mapping class="com.example.is_students.mai.entity.User"/>
+        <mapping class="com.example.is_students.mai.entity.Classroom"/>
+        <mapping class="com.example.is_students.mai.entity.LessonsTime"/>
+    </session-factory>
+</hibernate-configuration>
+
